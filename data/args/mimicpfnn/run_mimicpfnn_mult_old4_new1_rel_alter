@@ -1,0 +1,22 @@
+--mode load
+--net 100
+--env_mode mimicpfnn
+--rec_dir data/learning/mimicpfnn_mult_old4_new1_rel_alter
+--verbose true
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+
+--policy_type multiplicative
+
+--old_expert_names LocomotionFlat01_000
+--old_expert_names LocomotionFlat02_000
+--old_expert_names LocomotionFlat06_000
+--old_expert_names LocomotionFlat11_000
+
+--old_expert_weights data/learning/deepmimic_LocomotionFlat01_000/network4000
+--old_expert_weights data/learning/deepmimic_LocomotionFlat02_000/network4000
+--old_expert_weights data/learning/deepmimic_LocomotionFlat06_000/network4000
+--old_expert_weights data/learning/deepmimic_LocomotionFlat11_000/network4000
+
+--new_expert_names ext1

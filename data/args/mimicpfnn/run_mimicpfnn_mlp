@@ -1,0 +1,21 @@
+--char_info_module mimicpfnn_char_info.py
+--sim_char_file data/character/pfnn.urdf
+--base_motion_file data/motion/pfnn/pfnn_hierarchy.bvh
+
+--mode load
+--net 15000
+--env_mode mimicpfnn
+--rec_dir data/learning/mimicpfnn/mlp/exp1/
+--verbose false
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--env_noise true
+--user_input autonomous
+
+--policy_type mlp
+
+--action_range_min -1.5
+--action_range_max 1.5
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

@@ -1,0 +1,39 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode load
+--net 9000
+--env_mode deepmimic
+--rec_dir data/learning/amass/CMU/55_01/exp2/
+--verbose true
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise false
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.1
+
+--policy_type mlp
+--num_hid_size 512
+--num_hid_layers 2
+--policy_name amass_cmu_55_01
+
+--ref_motion_file data/motion/amass/CMU/55/55_01_poses.bvh
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0
+
+--w 960
+--h 1080 
+
+--cam_file data/cam/amass_cmu_55_01.cam.gzip
+
+--screenshot_dir data/screenshot/amass/CMU/55_01/exp2/
+--screenshot_start_time 0.0
+--screenshot_end_time 18.0

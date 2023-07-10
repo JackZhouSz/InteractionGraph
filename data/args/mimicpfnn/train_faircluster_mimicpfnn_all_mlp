@@ -1,0 +1,37 @@
+--char_info_module mimicpfnn_char_info.py
+--ref_motion_scale 0.9
+--sim_char_file data/character/pfnn.urdf
+--base_motion_file data/motion/pfnn/pfnn_hierarchy.bvh
+
+--mode test
+--net 9401
+--env_mode deepmimic
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/mimicpfnn/all/mlp/
+--rec_dir data/learning/mimicpfnn/all/mlp/
+--rec_period 100
+--verbose false
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise true
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.1
+
+--policy_type mlp
+--num_hid_size 512
+--num_hid_layers 2
+--policy_name mimicpfnn_all_mlp
+
+
+--ref_motion_dir data/motion/mimicpfnn/pfnn_clustering/motions/
+--ref_motion_num 1
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

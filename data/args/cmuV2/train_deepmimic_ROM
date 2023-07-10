@@ -1,0 +1,24 @@
+--yup false
+--char_info_module cmuV2_char_info.py
+--ref_motion_scale 0.029
+--sim_char_file data/character/cmuV2.urdf
+--base_motion_file data/motion/cmuV2/cmuV2_hierarchy.bvh
+
+--mode load
+--net 3000
+--env_mode deepmimic
+--rec_dir data/learning/cmuV2_deepmimic_ROM
+--rec_period 100
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.99
+--env_noise true
+
+--policy_type mlp
+--policy_name ROM
+
+--ref_motion_file data/motion/cmuV2/ROM.bvh
+
+--max_time_sec 720000

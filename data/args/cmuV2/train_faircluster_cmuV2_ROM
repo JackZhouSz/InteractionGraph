@@ -1,0 +1,23 @@
+--yup false
+--char_info_module cmuV2_char_info.py
+--ref_motion_scale 0.029
+--sim_char_file data/character/cmuV2.urdf
+--base_motion_file data/motion/cmuV2/cmuV2_hierarchy.bvh
+
+--mode train
+--env_mode deepmimic
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/cmuV2/ROM/
+--rec_period 100
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--env_noise false
+
+--policy_type mlp
+--policy_name ROM
+
+--ref_motion_file data/motion/cmuV2/ROM.bvh
+
+--max_time_sec 240000

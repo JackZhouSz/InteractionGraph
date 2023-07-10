@@ -1,0 +1,40 @@
+--cam_pos 20.0 0.0 18.0
+--cam_origin 4 0 0
+
+--render_window_w 1920
+--render_window_h 1080 
+
+--body_model bullet
+--random_start 1.0
+
+--file_dir data/learning/amass/CMU/c8/results/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster0/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster1/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster2/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster3/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster4/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster5/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster6/
+--file_dir data/learning/amass/CMU/c8/experts/results_sim/selected/cluster7/
+
+--file_num 90
+--file_num 8
+--file_num 8
+--file_num 3
+--file_num 8
+--file_num 8
+--file_num 8
+--file_num 8
+--file_num 3
+
+--file_shuffle true
+
+--grid true
+--grid_width 50
+--grid_height 40
+
+--screenshot_dir data/screenshot/amass/CMU/c8/grid_sim_all3/
+--screenshot_start_time 0.0
+--screenshot_end_time 10.0
+
+--num_worker 8

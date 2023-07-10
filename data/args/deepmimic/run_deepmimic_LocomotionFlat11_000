@@ -1,0 +1,14 @@
+--mode load
+--env_mode deepmimic
+--rec_dir data/learning/deepmimic_LocomotionFlat11_000
+--net 13950
+--verbose true
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+
+--policy_type mlp
+--policy_name LocomotionFlat11_000
+
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat11_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat11_000_mirror.bin

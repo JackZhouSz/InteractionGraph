@@ -1,0 +1,280 @@
+run: DDPPO
+name: JumpOverIGScaledExp02
+local_dir: /checkpoint/yzhang3027/exp/siggraph_final
+checkpoint_freq: 100
+checkpoint_at_end: true
+reuse_actors: true
+stop: 
+    time_total_s: 720000
+config:
+    env: HumanoidImitationInteractionGraphTwo
+    log_level: WARN
+    gamma: 0.98
+    lambda: 0.95
+    clip_param: 0.2
+    kl_coeff: 0.0
+    vf_clip_param: 1000
+    num_sgd_iter: 20
+    lr: 0.00001
+    sgd_minibatch_size: 500
+    horizon: 3600
+    train_batch_size: 100000
+    rollout_fragment_length: 25
+    normalize_actions: false
+    clip_actions: true
+    num_envs_per_worker: 8
+    num_cpus_per_worker: 8
+    num_gpus_per_worker: 0
+    remote_worker_envs: true
+    framework: torch
+    model:
+        custom_model: task_agnostic_policy_type1
+        custom_model_config:
+            log_std_type: constant
+            sample_std: 0.1
+            task_encoder_type: "mlp"
+            task_encoder_inputs:
+                - body
+                - task
+            task_encoder_output_dim: 32
+            task_encoder_layers:
+                - type: fc
+                  hidden_size: 256
+                  activation: "relu"
+                  init_weight: 
+                      name: normc
+                      std: 1.0
+                - type: fc
+                  hidden_size: 128
+                  activation: "relu"
+                  init_weight: 
+                      name: normc
+                      std: 1.0
+                - type: fc
+                  hidden_size: output
+                  activation: "linear"
+                  init_weight: 
+                      name: normc
+                      std: 0.01
+
+            body_encoder_enable: false
+            motor_decoder_type: "mlp"
+            motor_decoder_inputs:
+                - body
+                - task
+            motor_decoder_layers:
+                - type: fc
+                  hidden_size: 256
+                  activation: "relu"
+                  init_weight: 
+                      name: normc
+                      std: 1.0
+                - type: fc
+                  hidden_size: 256
+                  activation: "relu"
+                  init_weight: 
+                      name: normc
+                      std: 1.0
+                - type: fc
+                  hidden_size: output
+                  activation: "linear"
+                  init_weight: 
+                      name: normc
+                      std: 0.01
+            motor_decoder_learnable: true
+            motor_decoder_load_weights: "data/motion_priors/task_agnostic_policy_motor_decoder.pt"
+
+
+
+    num_workers: 8
+    num_gpus: 0
+    batch_mode: truncate_episodes
+    observation_filter: NoFilter
+    env_config:
+        lazy_creation: false
+        project_dir: /private/home/yzhang3027/ScaDive/
+        fps_sim: 480
+        fps_con: 30
+        add_noise: false
+        verbose: false
+        ground:
+            enable: true
+            friction_coeff: 1.0
+            contact_stiffness: 50000
+            contact_damping: 1000
+            falldown_check:
+                method: height
+                height_min: 0.3
+        state:
+
+            choices: ["body","oppo_body","ref_motion_abs","oppo_ref_motion_abs"]
+            # choices: ["sim_interaction_graph_state","ref_interaction_graph_state"]
+
+            body_type: facing_R6_h
+        action:
+            # 'absolute', 'relative'
+            type: "relative"
+            range_min: -3.0
+            range_max: 3.0
+            range_min_pol: -3.0
+            range_max_pol: 3.0
+        reward: 
+            fn_def:
+                default:
+                    name: total
+                    op: mul
+                    child_nodes:
+
+                      - name: weighted_im_vel
+                        op: leaf
+                        weight: 1.0
+                        kernel: 
+                            type: gaussian
+                            scale: 0.5               
+
+                      - name: weighted_ig_pos_base_relative
+                        op: leaf
+                        weight: 1.0
+                        kernel: 
+                            type: gaussian
+                            scale: 10                  
+
+                      - name: root_remove_height
+                        op: leaf
+                        weight: 1.0
+                        kernel: 
+                            type: gaussian
+                            scale: 2.5
+                      - name: com_remove_height
+                        op: leaf
+                        weight: 1.0
+                        kernel: 
+                            type: gaussian
+                            scale: 2.5
+            fn_map:
+                - default
+                - default
+        
+        early_term:
+            # 'sim_div', 'sim_window', task_end', 'falldown', 'low_reward'
+            choices:
+                - ref_motion_end
+                - low_reward
+            low_reward_thres: 0.1
+            eoe_margin: 0.2
+        character:
+            name:
+                - player1
+                - player2
+            char_info_module:
+                - char_info/cmu_char_info.py
+                - char_info/cmu_char_info.py
+            sim_char_file:
+                - data/character/cmu_s1_box.urdf
+                - data/character/cmu_s2_box.urdf
+            ref_motion_scale:
+                - 1.0
+                - 1.0
+            base_motion_file:
+                - data/motion/cmu/cmu_s1_hierarchy.bvh
+                - data/motion/cmu/cmu_s2_hierarchy.bvh
+            ref_motion_db:
+                -
+                    data:
+                        file:
+                            - data/motion/cmu/interactions/jump_crawl001_S1_full_jump_30fps.bvh
+                -
+                    data:
+                        file:
+                            - data/motion/cmu/interactions/jump_crawl001_S2_full_jump_30fps.bvh
+            physics:
+                - actuation: spd
+                  self_collision: true
+                - actuation: spd
+                  self_collision: true
+
+            reshape: 
+                -
+                    RightForeArm : [0.7,1,1]
+                    RightArm : [0.7,1,1]
+                    LeftForeArm : [0.7,1,1]
+                    LeftArm : [0.7,1,1]
+                    RightUpLeg: [1,1,0.7]
+                    RightLeg: [1,1,0.7]
+                    # RightFoot: [0.8,0.8,1]
+                    LeftUpLeg: [1,1,0.7]
+                    LeftLeg: [1,1,0.7]
+                    # LeftFoot: [0.8,0.8,1]
+                - 
+                    RightForeArm : [1.2,1,1]
+                    RightArm : [1.2,1,1]
+                    LeftForeArm : [1.2,1,1]
+                    LeftArm : [1.2,1,1]
+                    RightUpLeg: [1,1,1.2]
+                    RightLeg: [1,1,1.2]
+                    LeftUpLeg: [1,1,1.2]
+                    LeftLeg: [1,1,1.2]
+            ref_motion_height_fix:
+                - 
+                    -0.38
+                -
+                    0
+
+            reshape_ref: False
+        interaction:
+            interaction_enabled: True
+            prune_edges: False
+            interaction_type: interaction_mesh
+            interaction_choices: ["self","other_agent"]
+            index_type: link # could be link or joint 
+            
+            # interaction_choices: ["self","ground"]
+            interaction_weight_kernel: 10
+
+            oppo_interaction_joint_candidates:
+                - Hips
+                # - Spine
+                # - Spine1
+                - Spine2
+                # - Spine3
+                # - Neck
+                # - RightShoulder
+                - RightArm
+                - RightForeArm
+                - RightHand
+                # - LeftShoulder
+                - LeftArm
+                - LeftForeArm
+                - LeftHand
+                - RightUpLeg
+                - RightLeg
+                - RightFoot
+                - LeftUpLeg
+                - LeftLeg
+                - LeftFoot
+                - Head
+            interaction_joint_candidates:
+                - Hips
+                # - Spine
+                # - Spine1
+                - Spine2
+                # - Spine3
+                # - Neck
+                # - RightShoulder
+                - RightArm
+                - RightForeArm
+                - RightHand
+                # - LeftShoulder
+                - LeftArm
+                - LeftForeArm
+                - LeftHand
+                - RightUpLeg
+                - RightLeg
+                - RightFoot
+                - LeftUpLeg
+                - LeftLeg
+                - LeftFoot
+
+                - Head
+            # load_ref_interaction : data/interaction/jumping_jack/interaction.pkl
+            load_ref_interaction : null

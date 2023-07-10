@@ -1,0 +1,16 @@
+--mode load
+--env_mode deepmimic
+--rec_dir data/learning/deepmimic_multiple_ref_1
+--net 5000
+--verbose true
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat01_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat01_000_mirror.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat02_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat02_000_mirror.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat06_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat06_000_mirror.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat11_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat11_000_mirror.bin

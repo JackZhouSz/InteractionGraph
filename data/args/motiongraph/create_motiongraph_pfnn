@@ -1,0 +1,26 @@
+--char_info_module mimicpfnn_char_info.py
+--base_motion_file data/motion/pfnn/pfnn_hierarchy.bvh
+--save_graph_file data/temp/motion_graph_pfnn.gzip
+--load_graph_file data/temp/motion_graph_pfnn.gzip
+--create_motion true
+--create_motion_num_motions 64
+--create_motion_filename data/temp/motions_by_mg
+--create_motion_length 60
+--create_motion_min_length 10
+--scale 0.056444
+--diff_threshold 0.5
+--stride 2.0 
+--blend_window 0.5
+--w_joint_root_scale 2.0
+--w_joint_pos 8.0
+--w_joint_vel 2.0
+--w_root_pos 0.5
+--w_root_vel 1.5
+--w_ee_pos 3.0
+--w_ee_vel 1.0
+--num_worker 2
+
+--motion_files data/motion/iknn/fps24/LocomotionFlat01_000.gzip
+--motion_files data/motion/iknn/fps24/LocomotionFlat02_000.gzip
+
+

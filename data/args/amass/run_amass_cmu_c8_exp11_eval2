@@ -1,0 +1,102 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode load
+--net 17000
+--env_mode deepmimic
+--rec_dir data/learning/amass/CMU/c8/exp11/
+--rec_period 250
+--verbose true
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise false
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.01
+
+--policy_type additive
+--num_hid_size 256
+--num_hid_layers 2
+--num_hid_size_gate 128
+--num_hid_layers_gate 2
+--policy_name amass_cmu_c8
+
+--old_expert_names amass_cmu_mg_expert0
+--old_expert_names amass_cmu_mg_expert1
+--old_expert_names amass_cmu_mg_expert2
+--old_expert_names amass_cmu_mg_expert3
+--old_expert_names amass_cmu_mg_expert4
+--old_expert_names amass_cmu_mg_expert5
+--old_expert_names amass_cmu_mg_expert6
+--old_expert_names amass_cmu_mg_expert7
+
+--old_expert_weights data/learning/amass/CMU/mg/expert0/exp1/network21500
+--old_expert_weights data/learning/amass/CMU/mg/expert1/exp1/network21500
+--old_expert_weights data/learning/amass/CMU/mg/expert2/exp1/network21500
+--old_expert_weights data/learning/amass/CMU/mg/expert3/exp1/network21500
+--old_expert_weights data/learning/amass/CMU/mg/expert4/exp1/network21500
+--old_expert_weights data/learning/amass/CMU/mg/expert5/exp1/network21500
+--old_expert_weights data/learning/amass/CMU/mg/expert6/exp1/network21500
+--old_expert_weights data/learning/amass/CMU/mg/expert7/exp1/network21500
+
+--ref_motion_shuffle false
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0
+
+--screenshot_dir data/screenshot/amass/CMU/c8/exp11/comparison/
+
+--render_window_w 1920
+--render_window_h 1080 
+--render_overlay true
+
+--cam_file data/cam/main_180.cam.gzip
+
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_1149.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_1362.bvh
+
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_1662.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_1003.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev2_0824.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_0920.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_1763.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_1954.bvh
+
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_0691.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_1104.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_0558.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev2_1792.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev2_1978.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_1602.bvh
+
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_0914.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_0037.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_1256.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_0169.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_1256.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_0135.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev2_1033.bvh
+
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_0142.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_1269.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_1222.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev2_1031.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev2_0711.bvh
+
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_1822.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev3_0768.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_1135.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_1165.bvh
+
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev2_0312.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_1010.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev4_1848.bvh
+--ref_motion_files data/motion/motiongraph/amass_cmu_clustering/motions/dev1_1309.bvh
+

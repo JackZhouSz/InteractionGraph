@@ -1,0 +1,46 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--ref_motion_file data/motion/amass/CMU/20_21_Justin1/20_09_poses.bvh
+
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--ref_motion_file data/motion/amass/CMU/20_21_rory1/20_09_poses.bvh
+
+--state_choices body
+--state_choices imitation
+--state_choices interaction
+
+--mode retrain
+--net 5251
+--env_mode imitation
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/multiagent/exp5/
+--rec_period 250
+--verbose false
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise false
+--rew_mode mul
+--early_term_choices low_reward
+--et_low_reward_thres 0.1
+
+--sim_window 30
+--end_margin 3
+
+--policy_type mlp
+--policy_name multiagent
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

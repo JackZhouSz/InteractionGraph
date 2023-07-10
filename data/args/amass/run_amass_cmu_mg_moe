@@ -1,0 +1,55 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode load
+--net 200
+--env_mode deepmimic
+--rec_dir data/learning/amass/CMU/mg/moe/exp4/
+--rec_period 100
+--verbose true
+--log file
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise true
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.1
+
+--policy_type additive
+--num_hid_size 256
+--num_hid_layers 2
+--policy_name amass_cmu_mg_moe
+
+--old_expert_names amass_cmu_mg_expert0
+--old_expert_names amass_cmu_mg_expert1
+--old_expert_names amass_cmu_mg_expert2
+--old_expert_names amass_cmu_mg_expert3
+--old_expert_names amass_cmu_mg_expert4
+--old_expert_names amass_cmu_mg_expert5
+--old_expert_names amass_cmu_mg_expert6
+--old_expert_names amass_cmu_mg_expert7
+
+--old_expert_weights data/learning/amass/CMU/mg/expert0/exp1/network13000
+--old_expert_weights data/learning/amass/CMU/mg/expert1/exp1/network13000
+--old_expert_weights data/learning/amass/CMU/mg/expert2/exp1/network13000
+--old_expert_weights data/learning/amass/CMU/mg/expert3/exp1/network13000
+
+--ref_motion_dir data/motion/motiongraph/amass/CMU/
+--ref_motion_divide true
+--ref_motion_num 5
+
+--ref_motion_dir data/motion/motiongraph/amass_cmu_clustering/
+
+--max_time_sec 480000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0
+
+--trainable_gate true
+--trainable_old_expert true
+--trainable_new_expert true

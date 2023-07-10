@@ -1,0 +1,9 @@
+--mode merge_graph
+--merge_dir data/motion/motiongraph/merge/
+--verbose true
+
+--char_info_module amass_char_info.py
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--scale_skel 1.0
+--scale_motion 1.0

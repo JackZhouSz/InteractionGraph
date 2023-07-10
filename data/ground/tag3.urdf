@@ -1,0 +1,373 @@
+<?xml version="1.0" ?>
+<robot name="tag1">
+    <link name="wall">
+        <contact>
+              <lateral_friction value="2"/>
+        </contact>
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="1000.0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        
+        <collision>
+            <origin rpy="0 0 0" xyz="-7.5 1.0 0.0"/>
+            <geometry>
+                <box size="0.85 2.0 15.85"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="7.5 1.0 0.0"/>
+            <geometry>
+                <box size="0.85 2.0 15.85"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 1.0 -7.5"/>
+            <geometry>
+                <box size="15.85, 2.0 0.85"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 1.0 7.5"/>
+            <geometry>
+                <box size="15.85, 2.0 0.85"/>
+            </geometry>
+        </collision>
+
+        <collision>
+            <origin rpy="0 0 0" xyz="-7.5 1.0 0.0"/>
+            <geometry>
+                <box size="0.05 2.0 15.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="7.5 1.0 0.0"/>
+            <geometry>
+                <box size="0.05 2.0 15.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 1.0 -7.5"/>
+            <geometry>
+                <box size="15.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 1.0 7.5"/>
+            <geometry>
+                <box size="15.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-4.5 1.0, -4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, -4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, -4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-1.5 1.0, -4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, -4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, -4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="1.5 1.0, -4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, -4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, -4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="4.5 1.0, -4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, -4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, -4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-4.5 1.0, -1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, -1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, -1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-1.5 1.0, -1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, -1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, -1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="1.5 1.0, -1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, -1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, -1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="4.5 1.0, -1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, -1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, -1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-4.5 1.0, 1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, 1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, 1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-1.5 1.0, 1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, 1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, 1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="1.5 1.0, 1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, 1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, 1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="4.5 1.0, 1.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, 1.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, 1.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-4.5 1.0, 4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, 4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-4.5 1.0, 4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="-1.5 1.0, 4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, 4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="-1.5 1.0, 4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="1.5 1.0, 4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, 4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="1.5 1.0, 4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="1.57 0 0" xyz="4.5 1.0, 4.5"/>
+            <geometry>
+                <!-- <box size="0.85, 2.0 0.85"/> -->
+                <cylinder radius="0.5" length="2.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, 4.5"/>
+            <geometry>
+                <box size="1.0, 2.0 0.05"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="4.5 1.0, 4.5"/>
+            <geometry>
+                <box size="0.05, 2.0 1.0"/>
+            </geometry>
+        </collision>
+
+
+    </link>
+</robot>

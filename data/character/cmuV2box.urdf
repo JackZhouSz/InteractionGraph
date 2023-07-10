@@ -1,0 +1,482 @@
+<?xml version="1.0"?>
+
+  <robot name="cmuV2">
+
+    <link name="pelvis">
+      <inertial>
+        <origin xyz="-0.00787 0 0.04" rpy="0 0 0"/>
+        <mass value="6.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_pelvis">
+        <origin xyz="-0.00787 -0.05 0.04" rpy="0 0 0"/>
+        <geometry>
+          <sphere radius="0.075"/>
+        </geometry>
+      </collision>
+      <collision name="collision_1_pelvis">
+        <origin xyz="-0.00787 0.05 0.04" rpy="0 0 0"/>
+        <geometry>
+          <sphere radius="0.075"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lfemur">
+      <inertial>
+        <origin xyz="0 0 -0.22225" rpy="0 0 0"/>
+        <mass value="4.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lfemur">
+        <origin xyz="0 0 -0.22225" rpy="0 0 0"/>
+        <geometry>
+          <!-- <capsule radius="0.05" length="0.4134"/> -->
+          <box size="0.09 0.09 0.45"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="ltibia">
+      <inertial>
+        <origin xyz="0 0 -0.20701" rpy="0 0 0"/>
+        <mass value="3.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_ltibia">
+        <origin xyz="0 0 -0.20701" rpy="0 0 0"/>
+        <geometry>
+          <!-- <capsule radius="0.04" length="0.37682"/> -->
+          <box size="0.07 0.07 0.4"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lfoot">
+      <inertial>
+        <origin xyz="0.01900 0 -0.03000" rpy="0 0 0"/>
+        <mass value="0.8"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lfoot">
+        <origin xyz="0.01900 0 -0.03000" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.19 0.09 0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- <link name="ltoes">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.2"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_ltoes">
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.03" length="0.04"/>
+        </geometry>
+      </collision>
+    </link> -->
+
+    <link name="rfemur">
+      <inertial>
+        <origin xyz="0 0 -0.22225" rpy="0 0 0"/>
+        <mass value="4.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rfemur">
+        <origin xyz="0 0 -0.22225" rpy="0 0.00000 0"/>
+        <geometry>
+          <!-- <capsule radius="0.05" length="0.4134"/> -->
+          <box size="0.09 0.09 0.45"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="rtibia">
+      <inertial>
+        <origin xyz="0 0 -0.20701" rpy="0 0 0"/>
+        <mass value="3.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rtibia">
+        <origin xyz="0 0 -0.20701" rpy="0 0.00000 0"/>
+        <geometry>
+          <!-- <capsule radius="0.04" length="0.37682"/> -->
+          <box size="0.07 0.07 0.4"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="rfoot">
+      <inertial>
+        <origin xyz="0.01900 0 -0.03000" rpy="0 0 0"/>
+        <mass value="0.8"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rfoot">
+        <origin xyz="0.01900 0 -0.03000" rpy="0 0 0"/>
+        <geometry>
+          <box size="0.19 0.09 0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <!-- <link name="rtoes">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.2"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rtoes">
+        <origin xyz="0 0 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.03" length="0.04"/>
+        </geometry>
+      </collision>
+    </link> -->
+
+    <link name="lowerback">
+      <inertial>
+        <origin xyz="0.01041 0 0.11434" rpy="0 0 0"/>
+        <mass value="5.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lowerback">
+        <origin xyz="0.01041 0 0.14903" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.05" length="0.06415"/>
+        </geometry>
+      </collision>
+      <collision name="collision_1_lowerback">
+        <origin xyz="0.01041 0 0.07965" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.05" length="0.06415"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="upperback">
+      <inertial>
+        <origin xyz="0 0 0.086" rpy="0 0 0"/>
+        <mass value="8.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_upperback">
+        <origin xyz="0 0 0.1309" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.06" length="0.145"/>
+        </geometry>
+      </collision>
+      <collision name="collision_1_upperback">
+        <origin xyz="0 0 0.0412" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.06" length="0.125"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lclavicle">
+      <inertial>
+        <origin xyz="0 0.1 0" rpy="0 0 0"/>
+        <mass value="2.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lclavicle">
+        <origin xyz="0 0.1 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.035" length="0.11"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lhumerus">
+      <inertial>
+        <origin xyz="0 0 -0.1524" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lhumerus">
+        <origin xyz="0 0 -0.1524" rpy="0.0 0.0 0.0"/>
+        <geometry>
+          <box size="0.06 0.06 0.3"/>
+          <!-- <capsule radius="0.04" length="0.24576"/> -->
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lradius">
+      <inertial>
+        <origin xyz="0 0 -0.11" rpy="0 0 0"/>
+        <mass value="1.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lradius">
+        <origin xyz="0 0 -0.11" rpy="0.0 0.0 0.0"/>
+        <geometry>
+          <box size="0.05 0.05 0.2"/>
+          <!-- <capsule radius="0.03" length="0.16956"/> -->
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lhand">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lhand">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <sphere radius="0.035"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="rclavicle">
+      <inertial>
+        <origin xyz="0 -0.1 0" rpy="0 0 0"/>
+        <mass value="2.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rclavicle">
+        <origin xyz="0 -0.1 0" rpy="1.5708 0 0"/>
+        <geometry>
+          <capsule radius="0.035" length="0.11"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="rhumerus">
+      <inertial>
+        <origin xyz="0 0 -0.1524" rpy="0 0 0"/>
+        <mass value="1.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rhumerus">
+        <origin xyz="0 0 -0.1524" rpy="0.0 0.0 0.0"/>
+        <geometry>
+          <box size="0.06 0.06 0.3"/>
+          <!-- <capsule radius="0.04" length="0.24576"/> -->
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="rradius">
+      <inertial>
+        <origin xyz="0 0 -0.11" rpy="0 0 0"/>
+        <mass value="1.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rradius">
+        <origin xyz="0 0 -0.11" rpy="0.0 0.0 0.0"/>
+        <geometry>
+          <box size="0.05 0.05 0.2"/>
+          <!-- <capsule radius="0.03" length="0.16956"/> -->
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="rhand">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="0.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_rhand">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <sphere radius="0.035"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="lowerneck">
+      <inertial>
+        <origin xyz="-0.0039 -0.00032 0.02911" rpy="0 0 0"/>
+        <mass value="0.5"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_lowerneck">
+        <origin xyz="-0.0039 -0.00032 0.02911" rpy="0.00557 -0.06742 -0.00019"/>
+        <geometry>
+          <capsule radius="0.03" length="0.02385"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <link name="neck">
+      <inertial>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <mass value="3.0"/>
+        <inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/>
+      </inertial>
+      <collision name="collision_0_neck">
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <geometry>
+          <!-- <sphere radius="0.07"/> -->
+          <capsule radius="0.06" length="0.05"/>
+        </geometry>
+      </collision>
+    </link>
+
+    <joint name="lfemur" type="spherical">
+      <origin xyz="0 0.09652 0" rpy="0 0 0"/>
+      <parent link="pelvis"/>
+      <child link="lfemur"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="ltibia" type="revolute">
+      <origin xyz="0 0 -0.4445" rpy="0 0 0"/>
+      <parent link="lfemur"/>
+      <child link="ltibia"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="3.14"/>
+    </joint>
+
+    <joint name="lfoot" type="spherical">
+      <origin xyz="0 0 -0.41400" rpy="0 0 0"/>
+      <parent link="ltibia"/>
+      <child link="lfoot"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <!-- <joint name="ltoes" type="fixed">
+      <origin xyz="0.1 0 -0.03048" rpy="0 0 0"/>
+      <parent link="lfoot"/>
+      <child link="ltoes"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint> -->
+
+    <joint name="rfemur" type="spherical">
+      <origin xyz="0 -0.09652 0" rpy="0 0 0"/>
+      <parent link="pelvis"/>
+      <child link="rfemur"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="rtibia" type="revolute">
+      <origin xyz="0 0 -0.4445" rpy="0 0 0"/>
+      <parent link="rfemur"/>
+      <child link="rtibia"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="3.14"/>
+    </joint>
+
+    <joint name="rfoot" type="spherical">
+      <origin xyz="0 0 -0.41400" rpy="0 0 0"/>
+      <parent link="rtibia"/>
+      <child link="rfoot"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <!-- <joint name="rtoes" type="fixed">
+      <origin xyz="0.1 0 -0.03048" rpy="0 0 0"/>
+      <parent link="rfoot"/>
+      <child link="rtoes"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint> -->
+
+    <joint name="lowerback" type="spherical">
+      <origin xyz="-0.012 0 0.07883" rpy="0 0 0"/>
+      <parent link="pelvis"/>
+      <child link="lowerback"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="upperback" type="spherical">
+      <origin xyz="0.02083 0 0.1905" rpy="0 0 0"/>
+      <parent link="lowerback"/>
+      <child link="upperback"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="lclavicle" type="spherical">
+      <origin xyz="0 0 0.18313" rpy="0 0 0"/>
+      <parent link="upperback"/>
+      <child link="lclavicle"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="lhumerus" type="spherical">
+      <origin xyz="0 0.18 0" rpy="0 0 0"/>
+      <parent link="lclavicle"/>
+      <child link="lhumerus"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="lradius" type="revolute">
+      <origin xyz="0 0 -0.3048" rpy="0 0 0"/>
+      <parent link="lhumerus"/>
+      <child link="lradius"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="-3.14" upper="0.0"/>
+    </joint>
+
+    <joint name="lhand" type="fixed">
+      <origin xyz="0 0 -0.2413" rpy="0 0 0"/>
+      <parent link="lradius"/>
+      <child link="lhand"/>
+    </joint>
+
+    <joint name="rclavicle" type="spherical">
+      <origin xyz="0 0 0.18313" rpy="0 0 0"/>
+      <parent link="upperback"/>
+      <child link="rclavicle"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="rhumerus" type="spherical">
+      <origin xyz="0 -0.18 0" rpy="0 0 0"/>
+      <parent link="rclavicle"/>
+      <child link="rhumerus"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="rradius" type="revolute">
+      <origin xyz="0 0 -0.3048" rpy="0 0 0"/>
+      <parent link="rhumerus"/>
+      <child link="rradius"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="-3.14" upper="0.0"/>
+    </joint>
+
+    <joint name="rhand" type="fixed">
+      <origin xyz="0 0 -0.2413" rpy="0 0 0"/>
+      <parent link="rradius"/>
+      <child link="rhand"/>
+    </joint>
+
+    <joint name="lowerneck" type="spherical">
+      <origin xyz="0 0 0.18313" rpy="0 0 0"/>
+      <parent link="upperback"/>
+      <child link="lowerneck"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+    <joint name="neck" type="fixed">
+      <origin xyz="-0.00781 -0.00064 0.135" rpy="0 0 0"/>
+      <parent link="lowerneck"/>
+      <child link="neck"/>
+      <axis xyz="0 1.0 0"/>
+      <limit lower="0" upper="10"/>
+    </joint>
+
+  </robot>

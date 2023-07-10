@@ -1,0 +1,27 @@
+--mode train
+--env_mode mimicpfnn
+--rec_dir data/learning/mimicpfnn_mult_old4_new1_exp0_rel_alter
+--rec_period 1500
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--w_new_expert_usage 0.0
+
+--policy_type multiplicative
+
+--old_expert_names LocomotionFlat01_000
+--old_expert_names LocomotionFlat02_000
+--old_expert_names LocomotionFlat06_000
+--old_expert_names LocomotionFlat11_000
+
+--old_expert_weights data/learning/deepmimic_LocomotionFlat01_000/network14100
+--old_expert_weights data/learning/deepmimic_LocomotionFlat02_000/network14050
+--old_expert_weights data/learning/deepmimic_LocomotionFlat06_000/network14000
+--old_expert_weights data/learning/deepmimic_LocomotionFlat11_000/network13950
+
+--new_expert_names ext1
+
+--gate_expert_alter true
+--gate_expert_alter_iter 10

@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<robot name="terrain_noise">
+    <link name="wall">
+        <contact>
+              <lateral_friction value="2"/>
+        </contact>
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+            <mass value="1000.0"/>
+            <inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0"/>
+        </inertial>
+        <collision>
+            <origin rpy="0 0 0" xyz="-15.25 0.0 0.0"/>
+            <geometry>
+                <box size="0.5 8.0 30.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="15.25 0.0 0.0"/>
+            <geometry>
+                <box size="0.5 8.0 30.0"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 -15.25"/>
+            <geometry>
+                <box size="30.0, 8.0 0.5"/>
+            </geometry>
+        </collision>
+        <collision>
+            <origin rpy="0 0 0" xyz="0.0 0.0 15.25"/>
+            <geometry>
+                <box size="30.0, 8.0 0.5"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>
+

@@ -1,0 +1,13 @@
+--mode train
+--env_mode deepmimic
+--rec_dir data/learning/deepmimic_LocomotionFlat01_000
+--rec_period 50
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--sim_window 10.0
+--policy_name LocomotionFlat01_000
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat01_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat01_000_mirror.bin

@@ -1,0 +1,30 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode train
+--env_mode deepmimic
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/85_14/exp4/
+--rec_period 100
+--verbose false
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise true
+--rew_mode sum
+--rew_et false
+
+--policy_type mlp
+--policy_name amass_cmu_85_14
+
+--ref_motion_file data/motion/amass/CMU/85/85_14_poses.bvh
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

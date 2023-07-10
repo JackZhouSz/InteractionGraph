@@ -1,0 +1,68 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/multiagent/emerge/actor1.bvh
+
+--state_choices body
+--state_choices task
+
+--reward_choices root
+
+--reward_weight_keys com_vel
+--reward_weight_vals 0.6
+--reward_weight_keys pose_smoothness
+--reward_weight_vals 0.4
+
+--mode train
+--env_mode emerge_comp
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/multiagent/emerge/exp12/
+--rec_period 250
+--verbose false
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise true
+--rew_mode sum
+--early_term falldown
+--et_falldown_contactable_body lankle
+--et_falldown_contactable_body rankle
+
+--sim_window 30
+
+--policy_type mlp
+--policy_name multiagent
+
+--base_controller_policy_name amass_cmu_c8
+--base_controller_policy_type additive
+--base_controller_num_hid_size 256
+--base_controller_num_hid_layers 2
+--base_controller_num_hid_size_gate 128
+--base_controller_num_hid_layers_gate 2
+--base_controller_weight /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/exp30/network28500
+
+--old_expert_names amass_cmu_mg_expert0
+--old_expert_names amass_cmu_mg_expert1
+--old_expert_names amass_cmu_mg_expert2
+--old_expert_names amass_cmu_mg_expert3
+--old_expert_names amass_cmu_mg_expert4
+--old_expert_names amass_cmu_mg_expert5
+--old_expert_names amass_cmu_mg_expert6
+--old_expert_names amass_cmu_mg_expert7
+
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert0/exp1/network31500
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert1/exp1/network31500
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert2/exp1/network31500
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert3/exp1/network31500
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert4/exp1/network31500
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert5/exp1/network31500
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert6/exp1/network31500
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/c8/expert7/exp1/network31500
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

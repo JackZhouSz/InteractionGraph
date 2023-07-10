@@ -1,0 +1,20 @@
+--mode retrain
+--net 3401
+--env_mode mimicpfnn
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/mimicpfnn_add_e0b4/
+--rec_period 100
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.99
+--env_noise true
+
+--policy_type additive
+
+--new_expert_names ext1
+--new_expert_names ext2
+--new_expert_names ext3
+--new_expert_names ext4
+
+--max_time_sec 600000

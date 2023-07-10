@@ -1,0 +1,170 @@
+HIERARCHY
+ROOT Hips
+{
+	OFFSET 0.000000 0.000000 0.000000
+	CHANNELS 6 Xposition Yposition Zposition Xrotation Yrotation Zrotation
+	JOINT Spine
+	{
+		OFFSET 0.000000 0.053497 0.080245
+		CHANNELS 3 Xrotation Yrotation Zrotation
+		JOINT Spine1
+		{
+			OFFSET 0.000000 0.018579 0.105368
+			CHANNELS 3 Xrotation Yrotation Zrotation
+			JOINT Spine2
+			{
+				OFFSET 0.000000 0.009325 0.106586
+				CHANNELS 3 Xrotation Yrotation Zrotation
+				JOINT Spine3
+				{
+					OFFSET 0.000000 0.000000 0.106993
+					CHANNELS 3 Xrotation Yrotation Zrotation
+					JOINT Neck
+					{
+						OFFSET 0.000000 -0.040122 0.280858
+						CHANNELS 3 Xrotation Yrotation Zrotation
+						JOINT Head
+						{
+							OFFSET 0.000000 -0.025546 0.144881
+							CHANNELS 3 Xrotation Yrotation Zrotation
+							End Site
+							{
+								OFFSET 0.000000 0.000000 0.000000
+							}
+						}
+					}
+					JOINT RightShoulder
+					{
+						OFFSET -0.032541 -0.054234 0.175720
+						CHANNELS 3 Xrotation Yrotation Zrotation
+						JOINT RightArm
+						{
+							OFFSET -0.161619 0.000000 0.000000
+							CHANNELS 3 Xrotation Yrotation Zrotation
+							JOINT RightForeArm
+							{
+								OFFSET -0.257104 0.000000 0.000000
+								CHANNELS 3 Xrotation Yrotation Zrotation
+								JOINT RightHand
+								{
+									OFFSET -0.273485 0.000000 0.000000
+									CHANNELS 3 Xrotation Yrotation Zrotation
+									JOINT RightHandEnd
+									{
+										OFFSET -0.070844 0.000000 0.000000
+										CHANNELS 3 Xrotation Yrotation Zrotation
+										End Site
+										{
+											OFFSET 0.000000 0.000000 0.000000
+										}
+									}
+									JOINT RightHandThumb1
+									{
+										OFFSET -0.028338 -0.047230 -0.018892
+										CHANNELS 3 Xrotation Yrotation Zrotation
+										End Site
+										{
+											OFFSET 0.000000 0.000000 0.000000
+										}
+									}
+								}
+							}
+						}
+					}
+					JOINT LeftShoulder
+					{
+						OFFSET 0.032541 -0.054234 0.175720
+						CHANNELS 3 Xrotation Yrotation Zrotation
+						JOINT LeftArm
+						{
+							OFFSET 0.161619 0.000000 0.000000
+							CHANNELS 3 Xrotation Yrotation Zrotation
+							JOINT LeftForeArm
+							{
+								OFFSET 0.257104 0.000000 0.000000
+								CHANNELS 3 Xrotation Yrotation Zrotation
+								JOINT LeftHand
+								{
+									OFFSET 0.273485 0.000000 0.000000
+									CHANNELS 3 Xrotation Yrotation Zrotation
+									JOINT LeftHandEnd
+									{
+										OFFSET 0.070844 0.000000 0.000000
+										CHANNELS 3 Xrotation Yrotation Zrotation
+										End Site
+										{
+											OFFSET 0.000000 0.000000 0.000000
+										}
+									}
+									JOINT LeftHandThumb1
+									{
+										OFFSET 0.028338 -0.047230 -0.018892
+										CHANNELS 3 Xrotation Yrotation Zrotation
+										End Site
+										{
+											OFFSET 0.000000 0.000000 0.000000
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	JOINT RightUpLeg
+	{
+		OFFSET -0.096537 0.000000 -0.028202
+		CHANNELS 3 Xrotation Yrotation Zrotation
+		JOINT RightLeg
+		{
+			OFFSET 0.000000 0.000000 -0.431842
+			CHANNELS 3 Xrotation Yrotation Zrotation
+			JOINT RightFoot
+			{
+				OFFSET 0.000000 0.000000 -0.456398
+				CHANNELS 3 Xrotation Yrotation Zrotation
+				JOINT RightToeBase
+				{
+					OFFSET 0.000000 -0.128905 -0.046918
+					CHANNELS 3 Xrotation Yrotation Zrotation
+					End Site
+					{
+						OFFSET 0.000000 0.000000 0.000000
+					}
+				}
+			}
+		}
+	}
+	JOINT LeftUpLeg
+	{
+		OFFSET 0.096537 0.000000 -0.028202
+		CHANNELS 3 Xrotation Yrotation Zrotation
+		JOINT LeftLeg
+		{
+			OFFSET 0.000000 0.000000 -0.431842
+			CHANNELS 3 Xrotation Yrotation Zrotation
+			JOINT LeftFoot
+			{
+				OFFSET 0.000000 0.000000 -0.456398
+				CHANNELS 3 Xrotation Yrotation Zrotation
+				JOINT LeftToeBase
+				{
+					OFFSET 0.000000 -0.128905 -0.046918
+					CHANNELS 3 Xrotation Yrotation Zrotation
+					End Site
+					{
+						OFFSET 0.000000 0.000000 0.000000
+					}
+				}
+			}
+		}
+	}
+}
+MOTION
+Frames: 3
+Frame Time: 0.03333
+1.175926 -0.408673 0.973927 1.175100 -1.011100 -93.610400 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1.175926 -0.408673 0.973927 1.175100 -1.011100 -93.610400 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+1.175926 -0.408673 0.973927 1.175100 -1.011100 -93.610400 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0

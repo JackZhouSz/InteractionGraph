@@ -1,0 +1,40 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode load
+--net 21500
+--env_mode deepmimic
+--rec_dir data/learning/amass/CMU/mg/expert2/exp1/
+--verbose true
+--log file
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise false
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.1
+
+--policy_type mlp
+--num_hid_size 256
+--num_hid_layers 2
+--policy_name amass_cmu_mg_expert2
+
+--ref_motion_dir data/motion/motiongraph/amass_cmu_clustering/motions/
+--ref_motion_cluster_info data/motion/motiongraph/amass_cmu_clustering/features/velh_velv_acc/clusters_kmeans_8.tsv
+
+--ref_motion_cluster_id 2
+
+--ref_motion_cluster_num_sample 30
+--ref_motion_cluster_sample_method top
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0
+
+--sim_result_save_dir data/learning/amass/CMU/c8/experts/results/
+--sim_result_save_num_per_cluster 30
+--sim_result_save_success_only true

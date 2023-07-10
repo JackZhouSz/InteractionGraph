@@ -1,0 +1,60 @@
+--char_info_module mimicpfnn_char_info.py
+--ref_motion_scale 0.9
+--sim_char_file data/character/pfnn.urdf
+--base_motion_file data/motion/pfnn/pfnn_hierarchy.bvh
+
+--mode train
+--env_mode deepmimic
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/mimicpfnn/c3/exp1/
+--rec_period 250
+--verbose false
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise true
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.01
+
+--policy_type additive
+--num_hid_size 128
+--num_hid_layers 2
+--num_hid_size_gate 128
+--num_hid_layers_gate 2
+--policy_name mimicpfnn_moe
+
+--old_expert_names mimicpfnn_expert0
+--old_expert_names mimicpfnn_expert1
+--old_expert_names mimicpfnn_expert2
+
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/mimicpfnn/all/expert0/exp1/network9800
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/mimicpfnn/all/expert1/exp1/network9800
+--old_expert_weights /checkpoint/jungdam/Research/ScaDive/data/learning/mimicpfnn/all/expert2/exp1/network9800
+
+--new_expert_names beginner0
+
+--w_new_expert_usage 0.03
+
+--ref_motion_dir data/motion/mimicpfnn/pfnn_clustering/motions/
+--ref_motion_cluster_info data/motion/mimicpfnn/pfnn_clustering/features/velh_velv_acc/clusters_kmeans.tsv
+--ref_motion_cluster_id 0
+--ref_motion_cluster_id 1
+--ref_motion_cluster_id 2
+--ref_motion_cluster_num_sample 512
+--ref_motion_cluster_num_sample 512
+--ref_motion_cluster_num_sample 512
+--ref_motion_divide true
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0
+
+--ob_filter_update_for_expert false
+--trainable_gate true
+--trainable_old_expert true
+--trainable_new_expert true

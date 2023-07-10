@@ -1,0 +1,28 @@
+--mode test
+--env_mode deepmimic
+--rec_dir data/learning/deepmimic_composite_test
+--verbose true
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat01_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat01_000_mirror.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat02_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat02_000_mirror.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat06_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat06_000_mirror.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat11_000.bin
+--ref_motion_file data/motion/mimicpfnn/LocomotionFlat11_000_mirror.bin
+
+--policy_type composite
+
+--primitive_names LocomotionFlat01_000
+--primitive_names LocomotionFlat02_000
+--primitive_names LocomotionFlat06_000
+--primitive_names LocomotionFlat11_000
+
+--primitive_weights data/learning/deepmimic_LocomotionFlat01_000/network2500
+--primitive_weights data/learning/deepmimic_LocomotionFlat02_000/network2500
+--primitive_weights data/learning/deepmimic_LocomotionFlat06_000/network2500
+--primitive_weights data/learning/deepmimic_LocomotionFlat11_000/network2500

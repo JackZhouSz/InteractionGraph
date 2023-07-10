@@ -1,0 +1,26 @@
+--yup false
+--char_info_module cmuV2_char_info.py
+--ref_motion_scale 0.029
+--sim_char_file data/character/cmuV2box.urdf
+--base_motion_file data/motion/cmuV2/cmuV2_hierarchy.bvh
+
+--mode load
+--net 5500
+--env_mode deepmimic
+--rec_dir data/learning/cmuV2box/cp2/ROM/exp3/
+--verbose true
+--action_type cp
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise false
+
+--policy_type mlp
+--policy_name ROM
+
+--ref_motion_file data/motion/cmuV2/ROM.bvh
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

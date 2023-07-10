@@ -1,0 +1,37 @@
+--mode create
+--verbose true
+
+--char_info_module amass_char_info.py
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--scale_skel 1.0
+--scale_motion 1.0
+
+--base_length 1.5 
+--stride_length 1.5
+--blend_length 0.75
+--compare_length 0.75
+
+--diff_threshold 0.9
+
+--w_joint_root_scale 2.0
+--w_joint_pos 6.0
+--w_joint_vel 1.5
+--w_root_pos 4.0
+--w_root_vel 2.0
+--w_ee_pos 6.0
+--w_ee_vel 1.5
+--w_trajectory 0.0
+--num_comparison 3
+
+--num_worker 16
+--fps 30
+--visualize false
+
+--num_machine 8
+--id_machine 3
+
+--motion_dir data/motion/amass/CMU/
+--motion_labels data/motion/amass/CMU/label.txt
+--save_graph_file data/motion/motiongraph/amass_cmu_8_3.mg.gzip
+

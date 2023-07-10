@@ -1,0 +1,35 @@
+--verbose true
+
+--char_info_module amass_char_info.py
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--scale_skel 1.0
+--scale_motion 1.0
+
+--base_length 1.5 
+--stride_length 1.5
+--blend_length 0.75
+--compare_length 0.75
+
+--num_worker 8
+--fps 30
+--visualize false
+
+--motion_dir data/motion/amass/CMU/
+--motion_labels data/motion/amass/CMU/label.txt
+
+--mode load
+--load_graph_file data/motion/motiongraph/merge/amass_cmu.mg.graph.gzip
+
+--graph_reduce wcc
+--graph_reduce_num_component 1
+--graph_reduce edge_weight
+--graph_reduce_threshold 0.85
+
+--analysis true
+
+--create_motion true
+--create_motion_num_motions 8
+--create_motion_filename data/temp/mg_test
+--create_motion_max_length 10
+--create_motion_min_length 10

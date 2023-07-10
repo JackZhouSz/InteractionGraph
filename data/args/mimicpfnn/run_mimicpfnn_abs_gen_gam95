@@ -1,0 +1,9 @@
+--mode load
+--env_mode mimicpfnn
+--rec_dir data/learning/mimicpfnn_abs_gen_gam95
+--net 9000
+--verbose false
+--action_mode absolute
+--user_input autonomous
+--ob_filter true
+--gamma 0.95

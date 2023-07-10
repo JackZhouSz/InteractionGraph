@@ -1,0 +1,47 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode test
+--env_mode deepmimic
+--rec_dir data/learning/amass/test/
+--rec_period 250
+--verbose false
+--log file
+--action_type spd
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--env_noise false
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.1
+--reward_weight_scale 1.0
+
+--policy_type mlp
+--num_hid_size 256
+--num_hid_layers 2
+
+--ref_motion_files data/motion/amass/amass_hierarchy.bvh
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0
+
+--ob_filter_update_for_expert false
+--trainable_gate true
+--trainable_old_expert true
+--trainable_new_expert true
+
+--render_window_w 1920
+--render_window_h 1080 
+
+--cam_file data/cam/main_90.cam.gzip
+
+--render_overlay true
+
+--screenshot_dir data/screenshot/amass/spd_only_walk/
+--screenshot_start_time 0.0
+--screenshot_end_time 4.0

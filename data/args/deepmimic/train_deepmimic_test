@@ -1,0 +1,23 @@
+--yup true
+--char_info_module mimicpfnn_char_info.py
+--sim_char_file data/character/pfnn.urdf
+--base_motion_file data/motion/pfnn/pfnn_hierarchy.bvh
+--ref_motion_scale 0.9
+
+--mode test
+--env_mode deepmimic
+--rec_dir data/learning/deepmimic_test
+--rec_period 100
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--sim_window 30.0
+--ref_motion_file data/temp/motions_by_mg_0000.gzip
+--ref_motion_file data/temp/motions_by_mg_0001.gzip
+--ref_motion_file data/temp/motions_by_mg_0002.gzip
+--ref_motion_file data/temp/motions_by_mg_0003.gzip
+
+--batch_size 128
+--tuple_per_iter 256

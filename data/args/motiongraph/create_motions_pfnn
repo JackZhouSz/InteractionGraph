@@ -1,0 +1,21 @@
+--char_info_module mimicpfnn_char_info.py
+--base_motion_file data/motion/pfnn/pfnn_hierarchy.bvh
+--load_graph_file data/motion/motiongraph/motion_graph_pfnn.gzip
+--scale 0.056444
+--diff_threshold 0.5
+--stride 2.0 
+--blend_window 0.5
+--w_joint_root_scale 2.0
+--w_joint_pos 8.0
+--w_joint_vel 2.0
+--w_root_pos 0.5
+--w_root_vel 1.5
+--w_ee_pos 3.0
+--w_ee_vel 1.0
+
+--num_worker 16
+--create_motion true
+--create_motion_num_motions 256
+--create_motion_filename data/motion/motiongraph/pfnn/motions
+--create_motion_max_length 60
+--create_motion_min_length 10

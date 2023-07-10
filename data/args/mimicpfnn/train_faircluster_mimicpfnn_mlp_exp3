@@ -1,0 +1,24 @@
+--yup true
+--char_info_module mimicpfnn_char_info.py
+--sim_char_file data/character/pfnn.urdf
+--base_motion_file data/motion/pfnn/pfnn_hierarchy.bvh
+
+--mode retrain
+--net 5601
+--env_mode mimicpfnn
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/mimicpfnn/mlp/exp3/
+--rec_period 100
+--verbose false
+--log file
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise true
+
+--policy_type mlp
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

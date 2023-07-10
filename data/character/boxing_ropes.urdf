@@ -1,0 +1,197 @@
+<?xml version="1.0" ?>
+<robot name="cube">
+    <link name="base">
+        <contact>
+            <lateral_friction value="1.0"/>
+            <rolling_friction value="0.0"/>
+            <contact_cfm value="0.0"/>
+            <contact_erp value="1.0"/>
+        </contact>
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 -0.11"/>
+            <mass value="100.0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <!-- <visual>
+            <origin rpy="0 0 0" xyz="0 0 -0.11"/>
+            <geometry>
+                <box size="7 7 0.05"/>
+            </geometry>
+        </visual> -->
+        <!-- <collision>
+            <origin rpy="0 0 0" xyz="0 0 -0.11"/>
+            <geometry>
+                <box size="7 7 0.05"/>
+            </geometry>
+        </collision> -->
+    </link>
+    <joint name="wall_S" type="fixed" >
+        <parent link = "base" />
+        <child link="wall_S" />
+                <origin rpy = "0 0 0" xyz = "-3.5 0.0 0.25" />
+    </joint>
+    <link name="wall_S">
+        <contact>
+            <lateral_friction value="1.0"/>
+            <rolling_friction value="0.0"/>
+            <contact_cfm value="0.0"/>
+            <contact_erp value="1.0"/>
+        </contact>
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <mass value="10.0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 -3.5 0.25"/>
+            <geometry>
+                <cylinder length="1.5" radius="0.1"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.25"/>
+            <geometry>
+                <box size="0.2 7 0.2"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.75"/>
+            <geometry>
+                <box size="0.2 7 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <geometry>
+                <box size="0.2 7 1.0"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="wall_N" type="fixed" >
+        <parent link = "base" />
+        <child link="wall_N" />
+                <origin rpy = "0 0 0" xyz = "3.5 0.0 0.25" />
+    </joint>
+    <link name="wall_N">
+        <contact>
+            <lateral_friction value="1.0"/>
+            <rolling_friction value="0.0"/>
+            <contact_cfm value="0.0"/>
+            <contact_erp value="1.0"/>
+        </contact>
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <mass value="10.0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 3.5 0.25"/>
+            <geometry>
+                <cylinder length="1.5" radius="0.1"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.25"/>
+            <geometry>
+                <box size="0.2 7 0.2"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.75"/>
+            <geometry>
+                <box size="0.2 7 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <geometry>
+                <box size="0.2 7 1.0"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="wall_W" type="fixed" >
+        <parent link = "base" />
+        <child link="wall_W" />
+                <origin rpy = "0 0 0" xyz = "0.0 -3.5 0.25" />
+    </joint>
+    <link name="wall_W">
+        <contact>
+            <lateral_friction value="1.0"/>
+            <rolling_friction value="0.0"/>
+            <contact_cfm value="0.0"/>
+            <contact_erp value="1.0"/>
+        </contact>
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <mass value="10.0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="3.5 0 0.25"/>
+            <geometry>
+                <cylinder length="1.5" radius="0.1"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.25"/>
+            <geometry>
+                <box size="7 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.75"/>
+            <geometry>
+                <box size="7 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <geometry>
+                <box size="7 0.2 1.0"/>
+            </geometry>
+        </collision>
+    </link>
+    <joint name="wall_E" type="fixed" >
+        <parent link = "base" />
+        <child link="wall_E" />
+                <origin rpy = "0 0 0" xyz = "0.0 3.5 0.25" />
+    </joint>
+    <link name="wall_E">
+        <contact>
+            <lateral_friction value="1.0"/>
+            <rolling_friction value="0.0"/>
+            <contact_cfm value="0.0"/>
+            <contact_erp value="1.0"/>
+        </contact>
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <mass value="10.0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+        </inertial>
+        <visual>
+            <origin rpy="0 0 0" xyz="-3.5 0 0.25"/>
+            <geometry>
+                <cylinder length="1.5" radius="0.1"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.25"/>
+            <geometry>
+                <box size="7 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <visual>
+            <origin rpy="0 0 0" xyz="0 0 0.75"/>
+            <geometry>
+                <box size="7 0.2 0.2"/>
+            </geometry>
+        </visual>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0.5"/>
+            <geometry>
+                <box size="7 0.2 1.0"/>
+            </geometry>
+        </collision>
+    </link>
+</robot>
+

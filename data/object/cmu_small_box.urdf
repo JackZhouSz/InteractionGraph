@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<robot name="small_box">
+    <link name="Root">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+
+            <mass value="1.0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+
+        </inertial> 
+    </link>
+    <link name="Root_geom">
+        <inertial>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+
+            <mass value="1.0"/>
+            <inertia ixx="1" ixy="0" ixz="0" iyy="1" iyz="0" izz="1"/>
+
+        </inertial>
+        <collision>
+            <origin rpy="0 0 0" xyz="0 0 0"/>
+
+            <geometry>
+                <box size="0.3 0.3 0.3"/>
+            </geometry>
+        </collision>
+	</link>
+
+    <joint name="Root_geom" type="fixed">
+        <parent link="Root"/>
+        <child link="Root_geom"/>
+        <origin xyz="-0.15 0.15 0.1" rpy="0 0 0"/>
+    </joint>
+</robot>
+

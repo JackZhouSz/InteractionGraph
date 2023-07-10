@@ -1,0 +1,29 @@
+--yup false
+--char_info_module cmuV2_char_info.py
+--ref_motion_scale 0.029
+--sim_char_file data/character/cmuV2box.urdf
+--base_motion_file data/motion/cmuV2/cmuV2_hierarchy.bvh
+
+--mode retrain
+--net 7501
+--env_mode deepmimic
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/cmuV2box/ROM/ns2/exp2/
+--rec_period 100
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.99
+--env_noise false
+
+--policy_type mlp
+--policy_name ROM
+
+--ref_motion_file data/motion/cmuV2/ROM.bvh
+
+--max_time_sec 240000
+
+--action_range_min -1.5
+--action_range_max 1.5
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

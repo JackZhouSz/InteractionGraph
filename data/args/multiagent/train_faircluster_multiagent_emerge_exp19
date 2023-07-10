@@ -1,0 +1,52 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/multiagent/emerge/actor1.bvh
+
+--state_choices body
+--state_choices task
+
+--reward_choices root
+
+--reward_weight_keys pose_smoothness
+--reward_weight_vals 0.0
+--reward_weight_keys action_smoothness
+--reward_weight_vals 0.0
+--reward_weight_keys vel_to_ball
+--reward_weight_vals 0.1
+--reward_weight_keys stay_at_ball
+--reward_weight_vals 0.1
+--reward_weight_keys vel_to_goal
+--reward_weight_vals 0.3
+--reward_weight_keys stay_at_goal
+--reward_weight_vals 0.5
+
+--mode retrain
+--net 7501
+--env_mode emerge_comp
+--env_task dribble
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/multiagent/emerge/exp19/
+--rec_period 250
+--verbose false
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.99
+--env_noise true
+--rew_mode sum
+--early_term falldown
+--et_falldown_contactable_body lankle
+--et_falldown_contactable_body rankle
+
+--sim_window 60
+
+--policy_type mlp
+--policy_name multiagent
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

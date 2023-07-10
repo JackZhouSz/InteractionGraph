@@ -1,0 +1,17 @@
+--mode train
+--env_mode mimicpfnn
+--rec_dir data/learning/mimicpfnn_add_old0_new1_rel
+--rec_period 100
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--w_new_expert_usage 0.0
+
+--policy_type additive
+
+--new_expert_names ext1
+
+--batch_size 128
+--tuple_per_iter 512

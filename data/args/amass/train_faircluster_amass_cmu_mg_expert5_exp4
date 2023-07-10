@@ -1,0 +1,35 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode train
+--env_mode deepmimic
+--rec_dir /checkpoint/jungdam/Research/ScaDive/data/learning/amass/CMU/mg/expert5/exp4/
+--rec_period 100
+--verbose false
+--log file
+--action_mode relative
+--ob_filter true
+--gamma 0.95
+--env_noise true
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.1
+
+--policy_type mlp
+--num_hid_size 256
+--num_hid_layers 2
+--policy_name amass_cmu_mg_expert5
+
+--ref_motion_dir data/motion/motiongraph/amass_cmu_clustering/motions/
+--ref_motion_cluster_info data/motion/motiongraph/amass_cmu_clustering/features/velh_velv_acc/clusters_kmeans.tsv
+--ref_motion_cluster_id 5
+--ref_motion_cluster_max_rank 30
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0

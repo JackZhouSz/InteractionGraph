@@ -1,0 +1,9 @@
+--mode train
+--env_mode mimicpfnn
+--rec_dir data/learning/mimicpfnn_abs_gen_gam95
+--rec_period 50
+--verbose false
+--log file
+--action_mode absolute
+--ob_filter true
+--gamma 0.95

@@ -1,0 +1,70 @@
+--char_info_module amass_char_info.py
+--ref_motion_scale 1.0
+--sim_char_file data/character/amass.urdf
+--base_motion_file data/motion/amass/amass_hierarchy.bvh
+
+--mode load
+--net 25000
+--env_mode deepmimic
+--rec_dir data/learning/amass/CMU/c8/exp2/
+--rec_period 250
+--verbose true
+--log file
+--action_type spd
+--action_mode absolute
+--ob_filter true
+--gamma 0.95
+--env_noise false
+--rew_mode mul
+--early_term low_reward
+--et_low_reward_thres 0.01
+
+--policy_type additive
+--num_hid_size 256
+--num_hid_layers 2
+--num_hid_size_gate 128
+--num_hid_layers_gate 2
+--policy_name amass_cmu_c8
+
+--new_expert_names beginner0
+--new_expert_names beginner1
+--new_expert_names beginner2
+--new_expert_names beginner3
+--new_expert_names beginner4
+--new_expert_names beginner5
+--new_expert_names beginner6
+--new_expert_names beginner7
+
+--ref_motion_dir data/motion/motiongraph/amass_cmu_clustering/motions/
+--ref_motion_cluster_info data/motion/motiongraph/amass_cmu_clustering/features/velh_velv_acc/clusters_kmeans_8.tsv
+
+--ref_motion_shuffle false
+
+--ref_motion_cluster_id 0
+--ref_motion_cluster_id 1
+--ref_motion_cluster_id 2
+--ref_motion_cluster_id 3
+--ref_motion_cluster_id 4
+--ref_motion_cluster_id 5
+--ref_motion_cluster_id 6
+--ref_motion_cluster_id 7
+
+--ref_motion_cluster_num_sample 50
+--ref_motion_cluster_num_sample 50
+--ref_motion_cluster_num_sample 50
+--ref_motion_cluster_num_sample 50
+--ref_motion_cluster_num_sample 50
+--ref_motion_cluster_num_sample 50
+--ref_motion_cluster_num_sample 50
+--ref_motion_cluster_num_sample 50
+
+--max_time_sec 240000
+
+--action_range_min -3.0
+--action_range_max 3.0
+--action_range_min_pol -15.0
+--action_range_max_pol 15.0
+
+--sim_result_save_dir data/learning/amass/CMU/c8/exp2/evaluation/experts/
+--sim_result_save_num_per_cluster 50
+--sim_result_save_success_only false
